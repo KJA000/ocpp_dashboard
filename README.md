@@ -9,19 +9,6 @@ Backend 서버와 가상 충전기(SECC)를 연동하여 인증 → 플러그 �
 전체 시나리오를 재현합니다.
 
 
-**프로젝트 구성**
-
-OCPP_CS/
- └─ ocpp_dashboard/
-    ├─ Frontend/
-    │  └─ frontend/          # React 기반 프론트엔드
-    ├─ manage.py             # Django 서버 실행 파일
-    └─ ocpp_dashboard/       # CSMS 서버 코드
-
-OCPP_CP/
- └─ main.py                  # 충전기(SECC) 시뮬레이터
-
-
 **실행 환경**
 
 Frontend: Node.js, React
