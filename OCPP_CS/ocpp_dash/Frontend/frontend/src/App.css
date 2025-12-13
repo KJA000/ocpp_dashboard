@@ -1,0 +1,208 @@
+/* ========== RESET & BASE ========== */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; font-family: "Inter", sans-serif; }
+.page { min-height: 100%; background: #f3f4f6; color: #111; }
+
+/* ========== HEADER ========== */
+.header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ========== PANEL (CARD) STYLE ========== */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* 스크롤 포함 패널 */
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ========== CONTROL PANEL UI ========== */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.controls strong {
+  font-size: 15px;
+}
+.controls .row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.controls select,
+.controls input {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.controls button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #3b82f6;
+  color: white;
+  font-weight: 500;
+  transition: 0.15s;
+}
+.controls button:hover { background: #2563eb; }
+
+/* ========== TABLE ========== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+.table th, .table td {
+  border: 1px solid #e5e7eb;
+  padding: 6px 8px;
+}
+
+/* ========== NEW LAYOUT (3 COLUMN SYSTEM) ========== */
+.columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* 왼쪽 세로 스택 */
+.left-col {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 중앙 세로 스택 */
+.center-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 오른쪽 전체 세로 */
+.right-col {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 이벤트 로그 전체 높이 스크롤 */
+.center-col .card {
+  max-height: 600px;      /* 패널 전체 높이 제한 */
+  overflow-y: auto;       /* 내부 스크롤 */
+}
+
+/* ========== Fuzzing 실시간 로그 (하단 전체 폭) ========== */
+.fuzzlogs {
+  margin: 0 20px 20px 20px;
+}
+.fuzzlogs .scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+/* =======================
+      FuzzConsole 스타일 
+   ======================= */
+.fuzz-console {
+  width: 100%;
+  height: 100%;
+}
+
+.fuzz-log-container {
+  background: #000;
+  color: #eee;
+  padding: 12px;
+  border-radius: 8px;
+  height: 420px;            /* 필요하면 늘리거나 자동화 가능 */
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+}
+
+.fuzz-log-entry {
+  margin-bottom: 18px;
+}
+
+.fuzz-log-header {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.fuzz-log-header .time {
+  color: #6cf;
+  margin-right: 8px;
+}
+.fuzz-log-header .cp {
+  color: #9f9;
+  margin-right: 8px;
+}
+.fuzz-log-header .type {
+  color: #f99;
+  font-weight: bold;
+}
+
+.fuzz-log-json {
+  font-size: 13px;
+  line-height: 1.4em;
+  color: #ddd;
+  background: #111;
+  padding: 10px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+/* ========== MeterValues: 표 스크롤 ========== */
+.meter .table-wrap {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+.meter .table thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+/* 반응형 */
+@media (max-width: 1100px) {
+  .columns { flex-direction: column; }
+  .left-col, .right-col { width: 100%; }
+}
