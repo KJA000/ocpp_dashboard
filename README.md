@@ -12,6 +12,7 @@ Backend 서버(CSMS)와 가상 충전기(SECC)를 연동하여
 
 ## 📁 프로젝트 구조
 
+```bash
 OCPP_CS/
 └─ ocpp_dashboard/
 ├─ Frontend/
@@ -21,9 +22,7 @@ OCPP_CS/
 
 OCPP_CP/
 └─ main.py # 충전기(SECC) 시뮬레이터
-
-yaml
-코드 복사
+```
 
 ---
 
@@ -39,28 +38,29 @@ yaml
 
 ### 1️⃣ Frontend 실행 (충전 대시보드)
 
-```bash
+```
 cd OCPP_CS/ocpp_dashboard/Frontend/frontend
 npm install
 npm start
+```
 React 기반 충전 대시보드가 실행됩니다.
 
 충전 상태 및 이벤트 흐름을 실시간으로 확인할 수 있습니다.
 
 2️⃣ 서버(CSMS) 실행
-bash
-코드 복사
+```
 cd OCPP_CS/ocpp_dashboard
 python manage.py runserver
+```
 OCPP 1.6 기반 Central System Management Server(CSMS)가 실행됩니다.
 
 충전기(SECC)와 WebSocket 통신을 수행합니다.
 
 3️⃣ 충전기(SECC) 실행
-bash
-코드 복사
+```
 cd OCPP_CP
 python main.py
+```
 가상 충전기(SECC) GUI가 실행됩니다.
 
 CSMS와 연결되어 충전 상태를 시뮬레이션합니다.
