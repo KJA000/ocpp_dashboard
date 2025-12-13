@@ -1,0 +1,34 @@
+{
+    "configuration": [
+        {
+            "key": "AllowOfflineTxForUnknownId",
+            "readonly": false,
+            "value": "False"
+        },
+        {
+            "key": "AuthorizationCacheEnabled",
+            "readonly": false,
+            "value": "False"
+        },
+        {
+            "key": "AuthorizeRemoteTxRequests",
+            "readonly": false,
+            "value": "True"
+        },
+        {
+            "key": "BlinkRepeat",
+            "readonly": false,
+            "value": "3"
+        },
+        {
+            "key": "ClockAlignedDataInterval",
+            "readonly": false,
+            "value": "900"
+        },
+        {
+            "key": "ConnectionTimeOut",
+            "readonly": false,
+            "value": "60"
+        }
+    ]
+}
