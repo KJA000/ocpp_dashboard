@@ -68,8 +68,6 @@ class ControlCommand(models.Model):
         choices=[("queued","queued"),("sent","sent"),("done","done"),("error","error")],
         default="queued",
     )
-    # (선택) 처리 시간/오류메시지까지 남기고 싶으면 아래도 추가 가능
-    # processed_at = models.DateTimeField(null=True, blank=True)
-    # error_msg    = models.TextField(null=True, blank=True)
+    
 
     created_at = models.DateTimeField(auto_now_add=True)
